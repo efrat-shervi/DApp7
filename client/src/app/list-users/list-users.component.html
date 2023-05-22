@@ -1,0 +1,23 @@
+<p>list-users works!</p>
+<button (click)="goToAddUser()">Add User</button>
+
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users ">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+        <button (click)="deleteUser(user)" class="btn btn-default bt-sm">Delete</button>
+
+    <!-- <button 
+    (click)="updateAssignement(assignement)"
+    class="btn btn-default bt-sm"
+    >Update</button> -->
+    <!-- </tr> -->
+  </tbody>
+</table>
